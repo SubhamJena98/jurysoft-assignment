@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --themeBlue: #77CEEC;
+    --blue: #B8E2F2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.container {
+    width: 1500px;
+    margin: auto;
+}
+
+.sectionTitle {
+    width: 300px;
+    border-bottom: 3px solid var(--themeBlue);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.sectionTitle::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeBlue);
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+    transform: rotate(45deg) translate(50%, 50%);
+    border: 3px solid #eee;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    padding: 15px 0;
+    height: 75px;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: var(--blue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--themeBlue);
+}
+
+.banner {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://www.aahwahan.com/ProductImages/Sliders/f3bb9848-ddf2-49d6-8a35-3d3d289827ba.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner h1 {
+    margin-top: 230px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    width: 50%;
+    line-height: 4.2rem;
+    font-weight: 100;
+}
+
+.banner h1 span {
+    background-color: var(--themeBlue);
+    display: inline-block;
+    line-height: 3.5rem;
+    padding: 0 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.banner p {
+    color: #eee;
+    width: 50%;
+    text-shadow: 0 0 2px #000;
+    margin-top: 10px;
+}
+
+.banner button {
+    background-color: var(--themeBlue);
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+#aboutSection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutSection .cards>div {
+    width: 350px;
+    background-color: var(--themeBlue);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 15px;
+    height: 215px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#aboutSection .cards>div:hover {
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeBlue);
+    padding: 55px;
+    height: auto;
+}
+
+#aboutSection .cards>div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutSection .cards>div p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#aboutSection .cards>div button {
+    border: 1px solid var(--themeBlue);
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#aboutSection .cards>div:hover button {
+    background-color: var(--themeBlue);
+    color: #fff;
+}
+
+.programs {
+    background-color: var(--blue);
+    width: 100%;
+}
+
+.programs .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.programs .boxContainer .box {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.programs .boxContainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.programs .boxContainer .box .cardImage::after {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.programs .boxContainer .box .programTitle {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.programs .boxContainer .box .donationCount {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #444;
+    font-weight: 600;
+}
+
+.programs .boxContainer .box .donationCount span {
+    color: var(--themeBlue);
+}
+
+.programs .boxContainer .box button {
+    position: absolute;
+    left: 50%;
+    background-color: var(--themeBlue);
+    color: #efefef;
+    transform: translate(-50%);
+    bottom: -15px;
+    border-radius: 60px;
+    padding: 7px 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.education {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.education .videoPlayer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.education .educationContainer {
+    position: absolute;
+    background-color: #00000096;
+    width: 600px;
+    top: 35vh;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    padding: 30px;
+}
+
+.education .educationContainer h3 {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.education .educationContainer p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 10px 0 30px;
+}
+
+.education .educationContainer button {
+    background-color: var(--themeBlue);
+    border: 0;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* SWIPPER */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    left: 85px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--blue);
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.programs .boxContainer .productWidth {
+    width: 440%;
+    margin-bottom: 60px;
+}
+
+.join {
+    background-color: #181818;
+    color: #fff;
+}
+
+.join .joinTitle {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.join .joinTitle span {
+    font-weight: 800;
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    background-color: var(--themeBlue);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+footer {
+    background-color: black;
+    color: #c5c5c5;
+    padding: 50px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+footer .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    padding: 0 0 5px 0;
+}
+
+footer p {
+    font-size: medium;
+    margin-bottom: 15px;
+    color: #7f7f7f;
+}
+
+footer .linkContainer ul {
+    list-style-type: none;
+}
+
+footer .linkContainer ul li a{
+    text-decoration: none;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.signature{
+    display: flex;
+    width: 100%;
+   padding: 30px 30px 50px 50px;
+    background-color: #000;
+    color: #7f7f7f;
+    justify-content: space-between;
+}
+
+.signature p{
+    font-size: medium;
+}
+
+/* Responsive */
+
+@media  screen and (max-width: 1140px) {
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .banner h1{
+        margin-top: 200px;
+    }
+    #aboutSection .cards{
+        justify-content: space-around;
+        height: auto;
+    }
+
+    #aboutSection .cards > div{
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .banner{
+        background-position-x: 45%;
+    }
+    .banner h1{
+        font-size: 2.5rem;
+    }
+    .swiper{
+        left: 0;
+        gap: 2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header nav{
+        position: relative;
+        border: 2px solid #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    header nav::after{
+        top: 17px;
+    }
+
+    header nav::before{
+        top:7px;
+    }
+    header nav::after,
+    header nav::before{
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: var(--blue);
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+
+    header nav ul{
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+    }
+
+    header nav:hover ul{
+        right: 0;
+    }
+
+    header nav ul li{
+        display: block;
+    }
+
+    header nav ul li a{
+        width: 300px;
+        background-color: var(--themeBlue);
+    }
+
+    .banner{
+        background-position-x: 65%;
+    }
+
+    .banner p{
+        font-size: 14px;
+    }
+
+    .banner p,
+    .banner h1{
+        width: 70%;
+    }
+
+    #aboutSection .cards > div:hover{
+        width: 350px;
+    }
+
+    .education .videoPlayer{
+        width: 1280px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .banner h1{
+        margin-top: 150px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .banner button{
+        margin-bottom: 10px;
+    }
+
+    #aboutSection p{
+        text-align: justify;
+    }
+
+    #aboutSection .cards > div:hover{
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+
+    footer .container{
+        grid-template-columns: 1fr;
+    }
+}
